@@ -1,0 +1,33 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
+<HBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="CENTER_LEFT" >
+    <VBox>
+        <ScrollPane  prefHeight="600" prefWidth="1100" style="-fx-border-color: black ; -fx-padding: 10px">
+            <Label alignment="TOP_LEFT" text="操作结果" fx:id="output" wrapText="true" prefHeight="450" prefWidth="1000" style="-fx-font-size: 20px"></Label>
+        </ScrollPane>
+
+        <TextArea promptText="操作台" fx:id="input" prefHeight="600" prefWidth="1100" style="-fx-border-color: black; -fx-font-size: 20px;"></TextArea>
+    </VBox>
+    <VBox spacing="20.0" style="-fx-border-color: black">
+        <VBox spacing="20.0" alignment="CENTER">
+            <Button text="启动服务器" onMouseClicked="#startServer"></Button>
+            <Button text="关闭服务器" onMouseClicked="#stopServer"></Button>
+            <padding>
+                <Insets bottom="200.0"></Insets>
+            </padding>
+        </VBox>
+        <VBox spacing="20.0" prefWidth="200">
+
+            <Button text="运行SQL指令" onMouseClicked="#closeMySql"></Button>
+        </VBox>
+        <padding>
+            <Insets top="300" left="80" right="80"></Insets>
+        </padding>
+    </VBox>
+</HBox>
